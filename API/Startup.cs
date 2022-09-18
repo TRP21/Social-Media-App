@@ -19,11 +19,13 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using API.Extensions;
+using API.Middleware;
 
 namespace API
 {
     public class Startup
     {
+
         private readonly IConfiguration _config;
         public Startup(IConfiguration config)
         {
@@ -54,6 +56,8 @@ namespace API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             }
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 
