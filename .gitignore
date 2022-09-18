@@ -67,7 +67,6 @@ artifacts/
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
-
 # StyleCop
 StyleCopReport.xml
 
@@ -453,4 +452,7 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 appsettings.json
-socialmedia.db
+
+
+API/socialmedia.db
+API/socialmedia.db
